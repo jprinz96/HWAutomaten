@@ -1,10 +1,10 @@
 package org.fogl.constants;
 
 public class DEATransition {
-    public static final String INPUT_EMPTY = "";
+
     public static final char INPUT_EQUAL = '=';
     public static final char INPUT_OPEN_PARENTHESIS = '(';
-    public static final char INPUT_CLOSED_PARENTHESIS = ')';
+    public static final char INPUT_CLOSE_PARENTHESIS = ')';
     public static final char INPUT_PLUS = '+';
     public static final char INPUT_MINUS = '-';
     public static final char INPUT_MULTIPLY = '*';
@@ -23,7 +23,7 @@ public class DEATransition {
     public static boolean isOperator(char c){
         return c == INPUT_PLUS
                 || c == INPUT_MINUS
-                || c == INPUT_MULTIPLY 
+                || c == INPUT_MULTIPLY
                 || c == INPUT_DIVIDE;
     }
 

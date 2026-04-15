@@ -14,7 +14,6 @@ public class DEAStates {
 
     public static final char STATE_START = STATE_S;
     public static final char STATE_END = STATE_Z;
-    public static final char STATE_INVALID = 'X';
 
     //private Konstruktor damit kein Objekt erstellt werden kann
     private DEAStates() {

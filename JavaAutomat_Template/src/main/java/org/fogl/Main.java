@@ -1,10 +1,15 @@
 package org.fogl;
 
+import org.fogl.automat.DEAAutomat;
 import org.fogl.file.TXTFileReader;
 
 public class Main {
     public static void main(String[] args) {
 
-        //input = input.replaceAll("\\s+", ""); //Leerzeichen behandeln
+
+
+        DEAAutomat.DEA("1+4=5");
+        DEAAutomat.DEA("1(+4=5");
+
     }
 }
