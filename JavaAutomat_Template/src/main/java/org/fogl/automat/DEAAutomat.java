@@ -7,10 +7,14 @@ import org.fogl.constants.DEATransition;
 public class DEAAutomat {
 
     public static boolean DEA(String input) {
+       input = removeSpaces(input);
 
+        // Leerwort behandeln
+        if (input == null || input.isBlank()) {
+            return false;
+        }
 
-
-            // Startpunkt setzen
+        // Startpunkt setzen
         char state = DEAStates.STATE_START;
         boolean isValid = true;
 
@@ -101,7 +105,10 @@ public class DEAAutomat {
         }
 
 
-
         return isValid && state == DEAStates.STATE_END;
+    }
+
+    public static String removeSpaces(String input) {
+        return input.replaceAll("\\s+", "");
     }
 }
