@@ -1,9 +1,8 @@
 package org.fogl.file;
 
-import org.fogl.automat.DEAAutomat;
-import org.fogl.constants.DEAColors;
 
-import java.io.FileNotFoundException;
+import org.fogl.automat.DEAManager;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -24,7 +23,7 @@ public class TXTFileReader {
                 if (line.isEmpty()) {
                     continue;
                 }
-                DEAAutomat.DEA(line);
+                DEAManager.validEqution(line);
             }
 
         } catch (IOException e) {

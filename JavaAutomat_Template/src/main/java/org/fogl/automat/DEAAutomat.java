@@ -7,19 +7,6 @@ import org.fogl.constants.DEATransition;
 public class DEAAutomat {
 
     public static boolean DEA(String input) {
-        // Leerwort behandeln
-            if (input == null) {
-                System.out.println(DEAColors.ANSI_RED + "Leerwort" + DEAColors.ANSI_RESET);
-                return false;
-            }
-
-            //Leerzeichen entfernen
-            input = input.replaceAll("\\s+", "");
-
-            if (input.isBlank()) {
-                System.out.println(DEAColors.ANSI_RED + "Leerwort" + DEAColors.ANSI_RESET);
-                return false;
-            }
 
 
 
@@ -113,11 +100,7 @@ public class DEAAutomat {
             }
         }
 
-        if (isValid && state == DEAStates.STATE_END) {
-            System.out.println(DEAColors.ANSI_GREEN + "Der Ausdruck ist korrekt: " + input + DEAColors.ANSI_RESET);
-        } else {
-            System.out.println(DEAColors.ANSI_RED + "Der Ausdruck ist nicht korrekt: " + input + DEAColors.ANSI_RESET);
-        }
+
 
         return isValid && state == DEAStates.STATE_END;
     }
