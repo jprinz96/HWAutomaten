@@ -8,14 +8,22 @@ public class DEAAutomat {
 
     public static boolean DEA(String input) {
         // Leerwort behandeln
-        if (input == null || input.replaceAll("\\s+", "").isBlank()) {
-            System.out.println(DEAColors.ANSI_RED + "Leerwort" + DEAColors.ANSI_RESET);
-            return false;
-        }
+            if (input == null) {
+                System.out.println(DEAColors.ANSI_RED + "Leerwort" + DEAColors.ANSI_RESET);
+                return false;
+            }
 
-        input = input.replaceAll("\\s+", "");
+            //Leerzeichen entfernen
+            input = input.replaceAll("\\s+", "");
 
-        // Startpunkt setzen
+            if (input.isBlank()) {
+                System.out.println(DEAColors.ANSI_RED + "Leerwort" + DEAColors.ANSI_RESET);
+                return false;
+            }
+
+
+
+            // Startpunkt setzen
         char state = DEAStates.STATE_START;
         boolean isValid = true;
 
